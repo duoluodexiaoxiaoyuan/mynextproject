@@ -104,6 +104,7 @@ const nextConfig = {
 * import Loading from '@/app/loading.js'  不要写成@app/loading.js
 * layout.js的传参默认写的是{children}，但是我们写成props的时候要把{}去掉
 * use client指的是在客户端渲染
+* 有时候uesEffect放的位置在下面是有原因的，可能监听的函数没有初始化，不要说为了美观或者自己习惯就想移动到上面
 
 
 # 问题

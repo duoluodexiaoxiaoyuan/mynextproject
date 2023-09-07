@@ -1,16 +1,12 @@
 'use client'
 import { useCallback, useRef, useEffect } from "react"
-import { useRouter } from "next/router"
+import { useRouter } from "next/navigation"
 
-export default function Modal ({childern}) {
+export default function Modal ({children}) {
   const overlay = useRef()
   const wrapper = useRef()
   const router = useRouter()
 
-  useEffect(() => {
-    document.addEventListener("keydown", onkeydown)
-    return () => document.removeEventListener("keydown", onkeydown)
-  }, [onkeydown])
 
   const onDismiss = useCallback(() => {
     router.back()
@@ -28,6 +24,11 @@ export default function Modal ({childern}) {
     }
   }, [onDismiss])
 
+  useEffect(() => {
+    document.addEventListener("keydown", onKeyDown)
+    return () => document.removeEventListener("keydown", onKeyDown)
+  }, [onKeyDown])
+
   return (
     <div
       ref={overlay}
@@ -36,9 +37,9 @@ export default function Modal ({childern}) {
     >
       <div
         ref={wrapper}
-        className={"absolute top-1/2 left-1/2 w-full sm:w-10/12 md:8/12 lg:w-1/2 p-6"}
+        className={"absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full sm:w-10/12 md:8/12 lg:w-1/2 p-6"}
       >
-        {childern}
+        {children}
       </div>
     </div>
   )
