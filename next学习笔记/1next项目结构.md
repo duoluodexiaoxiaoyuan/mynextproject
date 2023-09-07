@@ -103,8 +103,10 @@ const nextConfig = {
 # 小细节
 * import Loading from '@/app/loading.js'  不要写成@app/loading.js
 * layout.js的传参默认写的是{children}，但是我们写成props的时候要把{}去掉
+* use client指的是在客户端渲染
 
 
 # 问题
 1.使用@team访问不到，报404还没有找到原因
+
 
