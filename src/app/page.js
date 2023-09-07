@@ -20,6 +20,8 @@ export default function Home() {
        {/* <h1 className={"text-4xl text-orange-600"}>Hello Home Page</h1><br/>
        <Link href={"/dashboard"}>Dashboard</Link><br/><br/>
        <PostList  posts={postData}/> */}
+       <Link href="/analytics">Analytics Page</Link><br/>
+       <Link href="/team">Teams</Link><br />
        <button type={"button"} onClick={() => router.push('/dashboard')}>
           Dashboard
        </button>
