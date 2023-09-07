@@ -80,6 +80,21 @@ const isActive = pathname === link.href
 * 可以理解为多条生产线同时进行，单核已经是极限了，为了提高CPU的利用率
 * 写法@+文件名  举例: @blog
 
+# 拦截路由
+
+
+# next.config.js的配置
+
+配置允许访问的域名
+```javascript
+const nextConfig = {
+  images: {
+    domains: ['images.unsplash.com'],
+  }
+}
+```
+
+# _folder(表示私人文件夹)
 # 小技巧
 * 我觉得初学者更多关注点应该在page.js里面，layout.js我感觉类似于antd-design组件的导航功能
 * next最牛的就是它的路由配置
