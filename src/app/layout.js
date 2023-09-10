@@ -15,14 +15,6 @@ export default function RootLayout(props) {
     <html lang="en">
       <body className={inter.className}>
         {props.children}
-        {props.modal} 
-        {/* {props.team}
-        {props.analytics} */}
-        {/* <Suspense fallback={<Loading/>}>
-          {props.children}
-          {props.team}
-          {props.analytics}
-        </Suspense> */}
       </body>
     </html>
   )

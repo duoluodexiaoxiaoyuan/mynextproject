@@ -1,10 +1,8 @@
 'use client'
-
-import Image from 'next/image'
-import Link from 'next/link'
-import PostList from './blog/PostList'
+import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import photos from './photo'
+// import axios from 'axios'
+import EveryWord from './_lib/EveryWord'
 
 export default function Home() {
 
@@ -16,28 +14,36 @@ export default function Home() {
 
   const router = useRouter()
 
+  useEffect(() => {
+    // getEveryWord()
+    // getArticles()
+  }, [])
+
+  const getEveryWord = async () => {
+    const res = await fetch('http://localhost:12600/ziji', {
+    });
+    const data = await res.json();
+    console.log(data)
+  }
+
+  // const  getArticles = async (uid, cursor) => {
+  //   const res = await axios.post(
+  //     "https://api.juejin.cn/content_api/v1/article/query_list",
+  //     {
+  //       cursor: cursor + "",
+  //       sort_type: 2,
+  //       user_id: uid + "",
+  //     }
+  //   );
+  
+  //   return res.data;
+  // }
+  
+
   return (
     <>
-       {/* <h1 className={"text-4xl text-orange-600"}>Hello Home Page</h1><br/>
-       <Link href={"/dashboard"}>Dashboard</Link><br/><br/>
-       <PostList  posts={postData}/> */}
-       {/* <button type={"button"} onClick={() => router.push('/dashboard')}>
-          Dashboard
-       </button> */}
        <main>
-        <div className='grid grid-cols-1 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 auto-rows-max gap-6'>
-          {console.log(photos)}
-          {photos.map((photo) => {
-            return <Link key={photo.id} href={`/photos/${photo.id}`}>
-              <Image
-                alt=''
-                src={photo.imageSrc}
-                height={100}
-                width={100}
-              />
-            </Link>
-          })}
-        </div>
+        <EveryWord/>
        </main>
     </>
   )
