@@ -12,7 +12,7 @@ const getEveryWord = () => {
 async function EveryWord() {
   
   const data =await getEveryWord()
-  console.log(data)
+  console.log(data, '111111111111')
   return (
     <div>EveryWords{data.name} </div>
   )
