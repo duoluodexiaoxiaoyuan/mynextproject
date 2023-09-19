@@ -2,7 +2,11 @@
 const nextConfig = {
   images: {
     domains: ['images.unsplash.com', 'ts1.cn.mm.bing.net'],
-  }
+  },
+  i18n: {
+    locales: ['en-US', 'zh-CN'],
+    defaultLocale: 'zh-CN',
+  },
 }
 
 module.exports = nextConfig

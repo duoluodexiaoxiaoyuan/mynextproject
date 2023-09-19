@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
        <main>
-        <EveryWord/>
+          个人主页
        </main>
     </>
   )

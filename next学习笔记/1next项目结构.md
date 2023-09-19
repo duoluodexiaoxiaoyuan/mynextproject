@@ -111,4 +111,5 @@ const nextConfig = {
 1.使用@team访问不到，报404还没有找到原因
 2.当我使用use client，然后子组件通过接口调用，莫名其妙浏览器会调用4次接口
 
-
+# tailwind文档
+* https://tailwindcss.com/docs/flex-direction

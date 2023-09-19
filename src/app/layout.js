@@ -1,9 +1,9 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import Link from 'next/link'
 import { Suspense } from 'react'
 import Loading from '@/app/loading.js'
 
-const inter = Inter({ subsets: ['latin'] })
+
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,9 +11,22 @@ export const metadata = {
 }
 // 默认写的是{children}，但是我们写成props的时候要把{}去掉
 export default function RootLayout(props) {
+  
+  let pages = ['Profile', 'About', 'Contact']
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
+        <header className='bg-sky-400 h-12 leading-10'>
+          {
+            pages.map((page, index) => {
+              return (
+                <Link href={`/${page.toLowerCase()}`} key={index} className='mr-8 hover:underline hover:text-green-100'>
+                  {page}
+                </Link>
+              )
+            })
+          }
+        </header>
         {props.children}
       </body>
     </html>
