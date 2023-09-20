@@ -12,7 +12,7 @@ export const metadata = {
 // 默认写的是{children}，但是我们写成props的时候要把{}去掉
 export default function RootLayout(props) {
   
-  let pages = ['Profile', 'About', 'Contact']
+  let pages = ['Profile', 'About', 'Contact', 'login']
   return (
     <html lang="en">
       <body>
