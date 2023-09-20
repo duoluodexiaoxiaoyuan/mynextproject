@@ -16,7 +16,7 @@ export default function RootLayout(props) {
   return (
     <html lang="en">
       <body>
-        <header className='bg-sky-400 h-12 leading-10'>
+        {/* <header className='bg-sky-400 h-12 leading-10'>
           {
             pages.map((page, index) => {
               return (
@@ -26,7 +26,7 @@ export default function RootLayout(props) {
               )
             })
           }
-        </header>
+        </header> */}
         {props.children}
       </body>
     </html>
