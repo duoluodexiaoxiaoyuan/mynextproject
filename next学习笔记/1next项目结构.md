@@ -113,3 +113,9 @@ const nextConfig = {
 
 # tailwind文档
 * https://tailwindcss.com/docs/flex-direction
+
+# tailwind查看tailwind写法
+* https://tailwindcomponents.com/cheatsheet/
+
+# next引入图片
+* 应该是只能放到pulic下面，然后写的时候/就代表的是public目录了，用相对路径没有成功，应该是现在不支持那样写
