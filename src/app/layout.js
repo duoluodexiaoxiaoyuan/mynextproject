@@ -2,6 +2,7 @@ import './globals.css'
 import Link from 'next/link'
 import { Suspense } from 'react'
 import Loading from '@/app/loading.js'
+import { Header } from "./header"
 
 
 
@@ -16,18 +17,8 @@ export default function RootLayout(props) {
   return (
     <html lang="en">
       <body>
-        <header className='bg-sky-400 h-12 leading-10'>
-          {
-            pages.map((page, index) => {
-              return (
-                <Link href={`/${page.toLowerCase()}`} key={index} className='mr-8 hover:underline hover:text-green-100'>
-                  {page}
-                </Link>
-              )
-            })
-          }
-        </header>
-        {props.children}
+        <Header/>
+        <div>你好世界</div>
       </body>
     </html>
   )
