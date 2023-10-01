@@ -18,7 +18,7 @@ export default function Home() {
       {/* end */}
 
       {/* start 第一种方法，最外层设置最小高度 */}
-      <div className="min-h-screen bg-purple-400">
+      <div className="container min-h-screen">
           <div className="h-[2000px] bg-red-600 w-[400px]"></div>
       </div>
       {/* end */}

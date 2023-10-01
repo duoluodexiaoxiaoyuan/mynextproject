@@ -10,6 +10,9 @@ module.exports = {
       screens: {
         // tablet: "690px",
       },
+      colors: {
+        favorite: "skyblue"
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
